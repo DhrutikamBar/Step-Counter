@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.activity.MainActivity">
+
+        <include
+            android:id="@+id/topAppBar"
+            layout="@layout/top_app_bar" />
+
+        <TextView
+            android:id="@+id/tvTodayActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Today's Activity"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:textColor="#9669E3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topAppBar" />
+
+        <LinearLayout
+            android:id="@+id/llStep"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTodayActivity">
+
+            <ImageView
+                android:id="@+id/icHistory"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_step"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvStepsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,228"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STEPS"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/icWalk"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_walk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llStep"
+            app:tint="#9669E3" />
+
+        <TextView
+            android:id="@+id/tvDistanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="DISTANCE"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#9669E3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icWalk" />
+
+        <TextView
+            android:id="@+id/tvDistanceCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.2km"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#9669E3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDistanceTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
